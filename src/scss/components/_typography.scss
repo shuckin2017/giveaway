@@ -1,0 +1,146 @@
+.title-xl-b {
+    @extend .font-bold;
+    font-size: 48px;
+    line-height: 58px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.title-lg-b {
+    @extend .font-bold;
+    font-size: 30px;
+    line-height: 30px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    @include mobile {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.title-md-b {
+    font-size: 24px;
+    line-height: 29px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+.title-sm-b {
+    @extend .font-bold;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.title-xl-r {
+    @extend .font-regular;
+    font-size: 48px;
+    line-height: 58px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.title-lg-r {
+    @extend .font-regular;
+    font-size: 30px;
+    line-height: 30px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    @include mobile {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.title-md-r {
+    @extend .font-regular;
+    font-size: 24px;
+    line-height: 29px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+.title-sm-r {
+    @extend .font-regular;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: normal;
+
+    @include desktop-sm {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+/* WEIGHT */
+
+.font-bold {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-regular {
+    font-weight: 400;
+    font-style: normal;
+}

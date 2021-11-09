@@ -1,0 +1,40 @@
+.banner {
+    background-color: $color-gray;
+    // .banner__wrapper
+
+    &__wrapper {
+        @extend .container;
+        
+    }
+
+    &__content {
+        padding: 20px 0 30px;
+        position: relative;
+    }
+
+    // .banner__title
+
+    &__title {
+        @extend .title-xl-b;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    // .banner__description
+
+    &__description {
+        @extend .title-md-r;
+        display: inline-block;
+        line-height: 29px;
+        max-width: 529px;
+        color: $color-dark;
+    }
+
+    // .banner__images
+
+    &__images {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
