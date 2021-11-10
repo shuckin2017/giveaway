@@ -25,6 +25,11 @@
     &__readmore {
         @extend .title-sm-b;
         color: $color-dark;
+        transition: $transition-default;
+        
+        &:hover {
+            color: $color-black;
+        }
     }
 }
 .item {
