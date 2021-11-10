@@ -1,0 +1,54 @@
+.btn {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    transition: $transition-default;
+
+    user-select: none;
+    &:active {
+        transform: scale(0.94);
+    }
+}
+
+
+.btn__type {
+    
+    &--rectangle {
+        @extend .btn;
+
+        border-width: 1px;
+        border-radius: 4px;
+        border-style: solid;
+    }
+}
+
+
+.btn__color {
+    
+    &--dark {
+        background-color: $color-black;
+        color: $color-white;
+        &:hover,
+        &:focus {
+            background-color: $color-dark;
+        }
+    }
+
+    &--gray {
+        background-color: $color-dark;
+        color: $color-white;
+        &:hover,
+        &:focus {
+            background-color: $color-dark;
+        }
+    }
+
+}
