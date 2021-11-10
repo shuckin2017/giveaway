@@ -43,7 +43,5 @@
         "stylelint-order": "^4.1.0",
         "stylelint-scss": "^3.18.0"
     },
-    "dependencies": {
-        "swiper": "^7.2.0"
-    }
+    "dependencies": {}
 }
