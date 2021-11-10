@@ -4,7 +4,7 @@
     line-height: 58px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 30px;
         line-height: 37px;
     }
@@ -21,7 +21,7 @@
     line-height: 30px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 18px;
         line-height: 18px;
     }
@@ -37,7 +37,7 @@
     line-height: 29px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 16px;
         line-height: 19px;
     }
@@ -54,7 +54,7 @@
     line-height: 22px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 14px;
         line-height: 17px;
     }
@@ -71,7 +71,7 @@
     line-height: 58px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 30px;
         line-height: 37px;
     }
@@ -88,7 +88,7 @@
     line-height: 30px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 18px;
         line-height: 18px;
     }
@@ -105,7 +105,7 @@
     line-height: 29px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 16px;
         line-height: 19px;
     }
@@ -122,14 +122,14 @@
     line-height: 22px;
     font-style: normal;
 
-    @include desktop-sm {
+    @include tablet{
         font-size: 14px;
         line-height: 17px;
     }
 
     @include mobile {
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 12px;
+        line-height: 15px;
     }
 }
 

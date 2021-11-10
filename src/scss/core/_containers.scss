@@ -8,10 +8,10 @@
     width: 100%;
     max-width: calc(var(--container-width) + var(--container-padding-size) * 2);
     @include tablet {
-        --container-padding-size: 36px;
+        --container-padding-size: 40px;
     }
     @include mobile {
-        --container-padding-size: 24px;
+        --container-padding-size: 20px;
     }
 }
 .container-lg {
