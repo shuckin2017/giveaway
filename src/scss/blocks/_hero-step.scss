@@ -1,8 +1,8 @@
 .hero {
     // .hero__wrapper
+    @extend .container;
 
     &__wrapper {
-        @extend .container;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -11,11 +11,32 @@
         padding-bottom: 62px;
         padding-left: 50px;
         padding-right: 50px;
+
+        @include tablet {
+            gap: 40px;
+            padding-top: 40px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 40px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            padding-top: 20px;
+            gap: 25px;
+        }
     }
 }
 .hero-step {
     display: grid;
     gap: 76px;
+
+    @include mobile {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        gap: 0;
+    }
 
     // .hero-step__item
 
@@ -29,6 +50,11 @@
         border-radius: 100%;
         position: relative;
 
+        @include mobile {
+            width: 22px;
+            height: 22px;
+        }
+
         &:not(:first-child)::before {
             content: '';
             width: 2px;
@@ -36,6 +62,14 @@
             bottom: 36px;
             background-color: #dddddd;
             position: absolute;
+
+            @include mobile {
+                height: 2px;
+                width: 100%;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+            }
         }
 
         span {
@@ -50,9 +84,9 @@
         background-color: $color-primary;
         position: relative;
 
-        &:not(:last-child)::before {
-            background-color: $color-primary;
-        }
+        // &:not(:last-child)::before {
+        //     background-color: $color-primary;
+        // }
 
         &::after {
             content: '';
@@ -61,25 +95,36 @@
             height: 48px;
             border-radius: 100%;
             border: 2px solid $color-primary;
-            z-index: 10;
+            z-index: 20;
+
+            @include mobile {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
     &__item-lastactive {
         background-color: $color-primary;
-
-        & .hero-step__item::before {
-            background-color: $color-primary;
-        }
     }
 }
 
 .hero-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 480px 477px;
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 20px;
+    gap: 23px;
+
+    @include tablet {
+        grid-template-columns: 334px 243px;
+    }
+
+    @include mobile {
+        grid-template-columns: none;
+        flex-direction: column;
+    }
 
     // .hero-content__body
 
@@ -95,6 +140,13 @@
         @extend .title-xl-b;
         padding-bottom: 40px;
         color: $color-dark;
+        @include tablet {
+            padding-bottom: 10px;
+        }
+
+        @include mobile {
+            padding-bottom: 15px;
+        }
     }
 
     // .hero-content__title
@@ -102,6 +154,9 @@
     &__title {
         @extend .title-xl-b;
         padding-bottom: 20px;
+        @include tablet {
+            padding-bottom: 10px;
+        }
     }
 
     // .hero-content__description
@@ -110,6 +165,13 @@
         @extend .title-sm-r;
         padding-bottom: 40px;
         color: $color-dark;
+
+        @include tablet {
+            padding-bottom: 10px;
+        }
+        @include mobile {
+            padding-bottom: 15px;
+        }
 
         &--number {
             display: flex;
@@ -132,9 +194,30 @@
         justify-content: center;
         align-items: center;
 
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @include mobile {
+            display: none;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
         &--light {
             opacity: 0.3;
         }
+
+        &--show {
+            display: block;
+        }
+    }
+
+    &__button {
+        width: 100%;
     }
 
     &__btn {
@@ -143,10 +226,23 @@
         @extend .btn__type--rectangle;
         @extend .title-sm-b;
         text-transform: uppercase;
-        padding: 19px 92px;
+        padding: 19px 0;
+        @include mobile {
+            padding: 12px 0;
+        }
 
         &--double {
-            padding: 19px 41px;
+            padding: 19px 0;
+        }
+
+        &--icon {
+            display: flex;
+            flex-direction: row;
+
+            svg {
+                width: 22px;
+                height: 20px;
+            }
         }
     }
 
@@ -156,12 +252,22 @@
         align-items: center;
         position: absolute;
         bottom: -130px;
+        right: 35%;
+
+        @include mobile {
+            transform: scale(-1, 1);
+            width: 115px;
+        }
 
         span {
             @extend .title-md-b;
             position: absolute;
             top: 40px;
             color: $color-red;
+            @include mobile {
+                transform: scale(-1, 1);
+                bottom: 0;
+            }
         }
     }
 
@@ -175,3 +281,7 @@
     align-items: center;
     justify-content: center;
 }
+
+// .hero-step__item-active + .hero-step__item::before {
+//     background-color: $primary-color;
+// }

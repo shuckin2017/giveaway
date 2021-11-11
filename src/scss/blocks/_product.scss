@@ -201,6 +201,7 @@
         justify-content: flex-start;
         align-items: flex-end;
         padding-bottom: 20px;
+       
         @include tablet {
             padding-bottom: 15px;
         }

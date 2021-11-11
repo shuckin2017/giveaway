@@ -64,6 +64,10 @@
                 display: none;
             }
         }
+
+        &:last-child {
+            grid-column: 1 / span 2;
+        }
         
         &--text {
             font-style: normal;

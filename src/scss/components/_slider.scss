@@ -1,6 +1,6 @@
 .slider {
-    padding: 32px;
-    color: #fff;
+    // padding: 32px;
+    overflow: hidden;
 }
 .slider .swiper-container {
     width: 100%;
@@ -9,12 +9,17 @@
 .slider__flex {
     display: flex;
     align-items: flex-start;
+
 }
 .slider__col {
     display: flex;
     flex-direction: column;
     width: 120px;
     margin-right: 32px;
+    @include mobile { 
+        width: 50px;
+        margin-right: 15px;
+    }
 }
 .slider__prev,
 .slider__next {
@@ -30,30 +35,44 @@
     -ms-user-select: none;
     user-select: none;
 }
+.slider-icon {
+    width: 40px;
+    height: 40px;
+    @include mobile {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.slider__next,
+.slider-icon {
+    transform: rotate(180deg);
+}
 .slider__prev:focus,
 .slider__next:focus {
     outline: none;
 }
 .slider__thumbs {
     height: calc(400px - 96px);
+
+    @include mobile {
+        height: 100%;
+    }
 }
 .slider__thumbs .slider__image {
     transition: 0.25s;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    opacity: 0.5;
 }
 .slider__thumbs .slider__image:hover {
     opacity: 1;
 }
 .slider__thumbs .swiper-slide-thumb-active .slider__image {
-    
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    opacity: 1;
+    border: 1px solid $color-primary;
 }
 .slider__images {
     height: 440px;
+    @include mobile {
+        height: 185px;
+    }
 }
 .slider__images .slider__image img {
     transition: 3s;
@@ -64,7 +83,7 @@
 .slider__image {
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 3px;
     overflow: hidden;
 }
 .slider__image img {
@@ -73,29 +92,4 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-}
-@media (max-width: 767.98px) {
-    .slider__flex {
-        flex-direction: column-reverse;
-    }
-    .slider__col {
-        flex-direction: row;
-        align-items: center;
-        margin-right: 0;
-        margin-top: 24px;
-        width: 100%;
-    }
-    .slider__images {
-        width: 100%;
-    }
-    .slider__thumbs {
-        height: 100px;
-        width: calc(100% - 96px);
-        margin: 0 16px;
-    }
-    .slider__prev,
-    .slider__next {
-        height: auto;
-        width: 32px;
-    }
 }

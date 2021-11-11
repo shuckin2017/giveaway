@@ -36,12 +36,101 @@
                 <section class="product">
                     <div class="product__content">
                         <div class="product__block">
-                            <div class="product__carousel"></div>
-                            <img
-                                class="product__picture"
-                                src="./img/product-img.png"
-                                alt=""
-                            />
+                            <div class="slider">
+                                <div class="slider__flex">
+                                    <div class="slider__col">
+                                        <div class="slider__prev">
+                                            <svg class="slider-icon">
+                                                <use
+                                                    xlink:href="./img/sprite.svg#arrow_down"
+                                                ></use>
+                                            </svg>
+                                        </div>
+
+                                        <div class="slider__thumbs">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div
+                                                            class="
+                                                                slider__image
+                                                            "
+                                                        >
+                                                            <img
+                                                                src="./img/product-img.png"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div
+                                                            class="
+                                                                slider__image
+                                                            "
+                                                        >
+                                                            <img
+                                                                src="./img/picture1.png"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div
+                                                            class="
+                                                                slider__image
+                                                            "
+                                                        >
+                                                            <img
+                                                                src="./img/product-img-3.png"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="slider__next">
+                                            <svg class="slider-icon">
+                                                <use
+                                                    xlink:href="./img/sprite.svg#arrow_down"
+                                                ></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="slider__images">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="slider__image">
+                                                        <img
+                                                            src="./img/product-img.png"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="slider__image">
+                                                        <img
+                                                            src="./img/picture1.png"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="slider__image">
+                                                        <img
+                                                            src="./img/product-img-3.png"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="product__info">
                             <div class="product__head">
@@ -258,6 +347,7 @@
             </footer>
         </div>
 
+        <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
